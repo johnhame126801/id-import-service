@@ -1,0 +1,11 @@
+spring:
+  data:
+    redis:
+      host: gz-crs-mqgms4qp.sql.tencentcdb.com
+      port: 24194
+      password: ivjl.123098aa
+      database: 0
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB

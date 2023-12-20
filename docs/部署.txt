@@ -1,0 +1,32 @@
+1. 安装marialDB
+   1) 添加源地址
+   vi /etc/yum.repos.d/mariadb.repo
+    [mariadb]
+    name = MariaDB
+    # rpm.mariadb.org is a dynamic mirror if your preferred mirror goes offline. See https://mariadb.org/mirrorbits/ for details.
+    # baseurl = https://rpm.mariadb.org/10.6/centos/$releasever/$basearch
+    baseurl = https://mirrors.aliyun.com/mariadb/yum/10.6/centos/$releasever/$basearch
+    module_hotfixes = 1
+    # gpgkey = https://rpm.mariadb.org/RPM-GPG-KEY-MariaDB
+    gpgkey = https://mirrors.aliyun.com/mariadb/yum/RPM-GPG-KEY-MariaDB
+    gpgcheck = 1
+
+   2) 清理仓库
+    yum clean all && yum makecache all
+
+   3) 安装
+    yum install MariaDB-server MariaDB-client -y
+
+   4) 启动
+    systemctl start mariadb
+    systemctl enable mariadb
+
+   5) 配置
+    mysql -uroot
+    create user 'root'@'%' identified by 'ivjl.123098aa';
+    create database id;
+    grant all privileges on id.* to 'root'@'%';
+
+    密码：ivjl.123098aa
+
+

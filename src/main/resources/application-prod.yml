@@ -1,0 +1,17 @@
+spring:
+  data:
+    redis:
+      host: 10.0.0.16
+      port: 6379
+      password: ivjl.123098aa
+      database: 0
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+server:
+  tomcat:
+    threads:
+      max: 500
+      min-spare: 200
+    accept-count: 1000
